@@ -17,6 +17,8 @@ body {
     --m-left-2: 72px;
     --m-right: 24px;
     --m-right-2: 72px;
+    --m-right-2: 16px;
+    --m-right-3: 72px;
     --logo-height: 32px;
     --section-height: auto;
     --section-width: 60%;
@@ -42,31 +44,99 @@ body {
 
 header {
     background-color: #fff;
-    height: 4rem;
+    height: 69px;
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     margin-left: var(--m-left);
 }
 
 .company-logo {
-    height: 3rem;
-    width: 25%;
-/*    padding: 0 2% 0 1.5rem;*/
+    height: 32px;
+/*    width: 25%;
+    padding: 0 2% 0 1.5rem;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .logo {
     height: 69px;
 }
 
-nav a {
-    margin-right: var(--m-right);
-    list-style-type: none;
-    padding-right: var(--padding-right-2);
-    font-size: 1.25rem;
+.company-logo h3 {
+    font-size: 2rem;
+    color: var(--dark-gray);
 }
 
-header li {
+.company-logo span {
+    font-size: 2rem;
+    color: var(--lightpurple-background-color);
+}
+
+header nav a {
+    margin-right: var(--m-right-2);
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--dark-gray);
+}
+
+header nav a span {
+    margin-right: var(--m-right);
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: var(--dark-gray);
+}
+
+header nav a::before {
+    content: "";
+    height: 69px;
+    width: var(--m-right-2);
+    color: var(--lightpurple-background-color);
+}
+
+/* Banner */
+
+.banner-container {
+    display: flex;
+/*    grid-template-columns: 60% 40%;*/
+    background-color: var(--lightpurple-background-color);
+    margin-left: var(--m-left);
+    padding-top: var(--padding-top);
+    padding-bottom: 42px;
+}
+
+.banner-container img {
+    width: 800px;
+    height: auto;
+    margin-left: 50px;
+    padding-top: var(--padding-top);
+    padding-right: 24px;
+}
+
+.banner-info {
+    display: flex;
+    flex-direction: column;
+/*    align-items: flex-start;*/
+    margin-left: 24px;
+    justify-content: center;
+}
+
+.banner-container h1 {
+    font-size: 52px;
+    line-height: 1.2;
+}
+
+.banner-container p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.banner-container .btn {
+    color: #fff;
+    background-color: var(--dark-gray);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 32px; 
 }
